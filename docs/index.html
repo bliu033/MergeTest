@@ -1,0 +1,46 @@
+<script>
+
+</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="piechart" style="width: 900px; height: 500px;"></div>
+<p id="demo"></p>
+
+<script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Repos'],
+          ['Done',     13],
+          ['ToBe Done',    62]
+        ]);
+
+        var options = {
+          title: 'Progress'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+</script>
+<br/>
+Result pulling every half an hour, and yah I know the UI sux :P   
+<br/>
+<b>Done:</b> <br/>
+
+<b>TOBE DONE:</b>
+<br/>
+
+</body>
+</html>
+
+
